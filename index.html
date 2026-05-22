@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ১. লগইন সেকশন -->
+    <div id="login-container" class="auth-box">
+        <h2>WhatsApp-এ স্বাগতম</h2>
+        <input type="text" id="username-input" placeholder="আপনার নাম লিখুন...">
+        <button id="login-btn">চ্যাট শুরু করুন</button>
+    </div>
+
+    <!-- ২. মেইন চ্যাট ইন্টারফেস (লগইন এর পর দেখাবে) -->
+    <div id="chat-container" class="chat-main hidden">
+        <!-- সাইডবার (ইউজার লিস্টের জন্য) -->
+        <div class="sidebar">
+            <div class="header">
+                <h3 id="user-profile-name">আমার প্রোফাইল</h3>
+            </div>
+            <div class="user-list" id="users-list-box">
+                <!-- এখানে একটিভ ইউজারদের নাম আসবে -->
+            </div>
+        </div>
+
+        <!-- চ্যাট উইন্ডো -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <h3 id="active-chat-partner">কাউকে সিলেক্ট করুন</h3>
+            </div>
+            
+            <!-- মেসেজ দেখার বক্স -->
+            <div class="chat-messages" id="chat-messages-box">
+                <!-- মেসেজগুলো এখানে রেন্ডার হবে -->
+            </div>
+
+            <!-- মেসেজ ইনপুট এরিয়া -->
+            <div class="chat-footer">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ফায়ারবেস এবং মেইন স্ক্রিপ্ট লোড (Type="module" অবশ্যক) -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
